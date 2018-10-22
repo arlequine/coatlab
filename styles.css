@@ -1,0 +1,227 @@
+:root {
+  --main-color: #f6f6f6;
+  --main-text-color: #ffffff;
+  --main-text-color-a: rgb(4, 191, 165);
+  --main-text-color-b: rgb(33, 83, 77);
+  --menu-icon-color: rgb(4, 191, 165);
+  --menu-icon-color-blue: rgb(85, 198, 215);
+  --menu-footer-bg-color: #1c1c1c;
+  --menu-text-size: 30px;
+  --menu-bg-color-desktop: #080808;
+}
+
+* {
+  width: 100%;
+  margin: 0 auto;
+  color: var(--main-text-color-a);
+  text-align: center;
+  list-style: none;
+  font-family: sans-serif;
+}
+body {
+  background-color: var(--main-color);
+}
+a {
+  color: rgb(4, 191, 165);
+  text-decoration: none;
+}
+section {
+  margin-top: 15px;
+  width: 90%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+div {
+  width: 100%;
+  margin: 20px auto;
+  text-align: center;
+}
+
+footer {
+  height: 20vh;
+  background-color: var(--menu-footer-bg-color);
+}
+
+/* Mobile */
+
+/*icon*/
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?bqb2fe');
+  src:  url('fonts/icomoon.eot?bqb2fe#iefix') format('embedded-opentype'),
+  url('fonts/icomoon.ttf?bqb2fe') format('truetype'),
+  url('fonts/icomoon.woff?bqb2fe') format('woff'),
+  url('fonts/icomoon.svg?bqb2fe#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-menu:before {
+  content: "\e900";
+}
+/* Icon */
+.navbar__list {
+  display: none;
+}
+
+.burger-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(33, 83, 77, .5);
+  display: block;
+  line-height: 40px;
+  text-align: center;
+  position: fixed;
+  z-index: 4;
+  left: 5px;
+  top: 5px;
+  color: var(--menu-icon-color);
+}
+.sidenav {
+  position: fixed;
+  background: var(--menu-bg-color);
+  z-index: 3;
+  top: 0;
+  left: -100vw;
+  width: 100vw;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .3s;
+  font-size: var(--menu-text-size);
+}
+.sidenav__list {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  height: 40%;
+  width: 100%;
+  padding: 0;
+  font-size: 30px;
+}
+.sidenav li {
+  margin-top: 10px;
+}
+.sidenav li:hover {
+  background-color: rgb(33, 83, 77, .9);
+  width: 100%;
+}
+.sidenav.is-active {
+  left: 0;
+}
+
+.team {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 70%;
+}
+.container {
+  max-width: 1000px;
+  flex: 1;
+  margin: 0 auto;
+  display: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+  height: inherit;
+  flex-wrap: inherit;
+}
+ /* Profile Cards */
+ .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 250px;
+    margin: 20px auto;
+    text-align: center;
+    background: rgb(33, 83, 77);
+ }
+
+ .empty {
+   display: none;
+ }
+
+ .title {
+   margin: 0 auto;
+ }
+
+/* Tablet */
+@media screen and (min-width: 767px) {
+  .card {
+    margin: 30px auto;
+  }
+  .team {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+  }
+  .burger-button {
+    display: none;
+  }
+  .navbar__list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    font-size: 25px;
+    background-color: var(--menu-bg-color-desktop);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .titles {
+    font-size: 30px;
+  }
+  .card {
+    margin: 40px auto;
+  }
+  .team {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+  }
+  .empty {
+    display: block;
+  }
+  .contacto {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Tablet */
